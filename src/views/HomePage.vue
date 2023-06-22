@@ -1,56 +1,61 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
+    <ion-content>
+        <button @click="isOpen = true">Open modal</button>
     </ion-content>
+    <TestModal :isOpen="isOpen"/>
   </ion-page>
 </template>
 
-<script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+<script>
+import { IonContent, IonPage } from '@ionic/vue';
+import TestModal from "../components/TestModal.vue"
+
+export default {
+  name: "HomePage",
+  components: {
+    IonContent,
+    IonPage,
+    TestModal
+  },
+  data() {
+    return {
+      isOpen: false
+    }
+  }
+}
+
 </script>
 
 <style scoped>
 #container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100%;
+}
+
+h1 {
   text-align: center;
-  
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+}
+.continer2 {
+  flex: 1 1 0%;
+  margin-top: 4rem;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.lower {
+  margin-bottom: 1rem;;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  
-  color: #8c8c8c;
-  
-  margin: 0;
+button {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 999px;
 }
 
-#container a {
-  text-decoration: none;
-}
 </style>
