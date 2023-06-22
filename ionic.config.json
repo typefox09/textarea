@@ -1,0 +1,7 @@
+{
+  "name": "textarea",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
