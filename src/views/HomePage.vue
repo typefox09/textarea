@@ -2,8 +2,8 @@
   <ion-page>
     <ion-content>
         <button @click="isOpen = true">Open modal</button>
+        <TestModal :isOpen="isOpen"/>
     </ion-content>
-    <TestModal :isOpen="isOpen"/>
   </ion-page>
 </template>
 

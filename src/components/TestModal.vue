@@ -4,7 +4,7 @@
         <div id="container">
           <h1>Heading</h1>
           <div class="continer2">
-            <h2>Write a public review</h2>
+            <h2>Write a publi review</h2>
             <p>Ready to create an app?</p>
             <ion-textarea label="textarea" fill="outline" placeholder="Insert text here" maxlength="4000"  :counter="true" rows="6" label-placement="stacked"></ion-textarea>
           </div>
